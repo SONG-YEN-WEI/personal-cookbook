@@ -88,5 +88,105 @@
     "summary": "討論用電磁爐、米酒、白胡椒及太白粉；未看到煎後回饋。",
     "evidence": "之前都是用米酒和白胡椒粉來醃大比目魚，然後再灑上太白粉煎。",
     "reviewNote": "需確認魚片厚度與當次做法，不能只用固定時間判定熟度。"
+  },
+  {
+    "id": "chicken-002",
+    "title": "香菇冬瓜雞湯",
+    "category": "雞肉",
+    "method": "煮湯",
+    "status": "unreviewed",
+    "summary": "曾比較先煎與汆燙雞肉，後來偏好先煎；未看到煮後結果。",
+    "evidence": "我想先煎。我有香菇跟薑片、米酒、清雞湯，幫我規劃食譜流程，兩人份的。",
+    "reviewNote": "需確認雞肉部位與最後實際採用的湯量、煮法。"
+  },
+  {
+    "id": "chicken-003",
+    "title": "番茄雞肉炒蛋",
+    "category": "雞肉",
+    "method": "炒",
+    "status": "unreviewed",
+    "summary": "有指定雞胸、雞蛋與牛番茄的規劃需求；未看到實作回饋。",
+    "evidence": "請提供我番茄雞肉炒蛋的食譜，用的是兩片雞胸肉、五顆蛋、三顆牛番茄。",
+    "reviewNote": "需核對實際食材重量、雞肉處理方式與調味。"
+  },
+  {
+    "id": "chicken-004",
+    "title": "雞胸冬瓜香菇板豆腐湯",
+    "category": "雞肉",
+    "method": "水煮",
+    "status": "unreviewed",
+    "summary": "曾討論整片雞胸不切薄、不裹太白粉的版本；未看到煮後結果。",
+    "evidence": "今天晚餐是全聯的鮮嫩雞胸肉、冬瓜、板豆腐，我打算加乾香菇、昆布粉，弄成水煮。",
+    "reviewNote": "整片雞胸的厚度會影響熟度；需核對實物與安全判斷方式。"
+  },
+  {
+    "id": "chicken-005",
+    "title": "白蘿蔔板豆腐雞胸昆布鍋",
+    "category": "雞肉",
+    "method": "水煮",
+    "status": "unreviewed",
+    "summary": "指定白蘿蔔、板豆腐與雞胸肉的清淡水煮餐；未看到煮後結果。",
+    "evidence": "今天煮半條白蘿蔔＋板豆腐＋3片雞胸肉＋昆布粉的水煮餐。",
+    "reviewNote": "需核對白蘿蔔塊大小、雞胸厚度與使用者最後的熟度回饋。"
+  },
+  {
+    "id": "vegetable-002",
+    "title": "紅燒冬瓜",
+    "category": "蔬菜菇類",
+    "method": "紅燒",
+    "status": "unreviewed",
+    "summary": "曾要求食譜；未看到實作回饋。",
+    "evidence": "今天我想煮紅燒冬瓜，請提供食譜。",
+    "reviewNote": "需確認份量、調味與實際是否做過。"
+  },
+  {
+    "id": "vegetable-003",
+    "title": "涼拌小黃瓜",
+    "category": "蔬菜菇類",
+    "method": "涼拌",
+    "status": "tested",
+    "summary": "使用者提到以前以味醂、白醋、糖與蒜粉調味；結果未記錄。",
+    "evidence": "我之前是用味霖、白醋、糖、蒜粉調味，生的蒜會不會太嗆？",
+    "reviewNote": "應先確認過去使用的配比與是否滿意，才能建立正式版本。"
+  },
+  {
+    "id": "vegetable-004",
+    "title": "竹筍炒豆干",
+    "category": "蔬菜菇類",
+    "method": "炒",
+    "status": "unreviewed",
+    "summary": "曾詢問竹筍與豆干的下鍋順序；未看到實作回饋。",
+    "evidence": "如果竹筍跟豆干一起炒，該先炒哪個？",
+    "reviewNote": "需確認竹筍是否已煮熟，以及實際料理與調味方式。"
+  },
+  {
+    "id": "vegetable-005",
+    "title": "白蘿蔔塊炒燜",
+    "category": "蔬菜菇類",
+    "method": "炒燜",
+    "status": "unreviewed",
+    "summary": "詢問白蘿蔔如何炒，並指定切塊；未看到實作回饋。",
+    "evidence": "那白蘿蔔該怎麼炒？我要切塊。",
+    "reviewNote": "需確認切塊大小、鍋具與最後採用的做法。"
+  },
+  {
+    "id": "fish-002",
+    "title": "馬告鯛魚排配豆包青江菜",
+    "category": "魚與海鮮",
+    "method": "清淡料理",
+    "status": "unreviewed",
+    "summary": "曾要求清淡料理流程；未看到實作回饋。",
+    "evidence": "今天晚餐的有馬告鯛魚排、生豆包、青江菜，我想用比較清淡的方式料理。",
+    "reviewNote": "需確認實際採用蒸、煮或煎，以及魚片厚度。"
+  },
+  {
+    "id": "egg-001",
+    "title": "電磁爐蒸蛋",
+    "category": "蛋與豆製品",
+    "method": "蒸",
+    "status": "unreviewed",
+    "summary": "曾安排電磁爐蒸蛋晚餐；未看到蒸蛋的實作結果。",
+    "evidence": "今天晚餐是煎大比目魚、椒鹽杏鮑菇、電磁爐蒸蛋五顆，請幫我規劃食譜。",
+    "reviewNote": "需確認容器、用水量、蒸製方式與結果。"
   }
 ]
