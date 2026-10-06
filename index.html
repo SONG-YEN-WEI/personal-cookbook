@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f6f1e8">
+    <meta name="description" content="整理自己的食譜、實作回饋與料理照片。">
+    <title>我的食譜</title>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./icons/icon-180.png">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="site-header">
+        <div class="brand-mark" aria-hidden="true">食</div>
+        <div>
+          <p class="eyebrow">PERSONAL COOKBOOK</p>
+          <h1>我的食譜</h1>
+        </div>
+        <span id="connection-status" class="connection-status" role="status">準備中</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="intro-title">
+          <p class="eyebrow">自己的廚房，自己的版本</p>
+          <h2 id="intro-title">從做過的經驗，整理下一次更好吃的做法。</h2>
+          <p>這裡先收錄料理線索與實作回饋。尚未核對的 AI 提議不會顯示為已驗證食譜。</p>
+        </section>
+
+        <section class="catalog" aria-labelledby="catalog-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">料理清單</p>
+              <h2 id="catalog-title">找一道料理</h2>
+            </div>
+            <span id="result-count" class="result-count"></span>
+          </div>
+          <div class="filters">
+            <label class="search-field">
+              <span class="visually-hidden">搜尋料理</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg>
+              <input id="search" type="search" placeholder="搜尋食材或料理名稱" autocomplete="off">
+            </label>
+            <label class="select-field">
+              <span class="visually-hidden">篩選狀態</span>
+              <select id="status-filter">
+                <option value="all">全部狀態</option>
+                <option value="validated">已驗證</option>
+                <option value="tested">做過，待整理</option>
+                <option value="needs_revision">做過，待修訂</option>
+                <option value="unreviewed">待核對</option>
+              </select>
+            </label>
+          </div>
+          <div id="load-error" class="error-panel" role="alert" hidden></div>
+          <div id="recipe-list" class="recipe-grid" aria-live="polite"></div>
+          <div id="empty-state" class="empty-state" hidden>
+            <div class="empty-icon" aria-hidden="true">✦</div>
+            <h3>目前沒有符合的料理</h3>
+            <p>試著清除搜尋或切換狀態。</p>
+          </div>
+        </section>
+
+        <section id="detail" class="detail" aria-labelledby="detail-title" hidden>
+          <button id="back-button" class="text-button" type="button">← 返回料理清單</button>
+          <div class="detail-header">
+            <div>
+              <p id="detail-kicker" class="eyebrow"></p>
+              <h2 id="detail-title"></h2>
+              <p id="detail-summary" class="detail-summary"></p>
+            </div>
+            <span id="detail-status" class="status-badge"></span>
+          </div>
+          <div id="detail-content"></div>
+
+          <section class="session-section" aria-labelledby="session-title">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">只存在這個裝置</p>
+                <h3 id="session-title">記錄這次料理</h3>
+              </div>
+            </div>
+            <form id="session-form" class="session-form">
+              <label>這次的結果
+                <select id="session-rating" required>
+                  <option value="">選擇評分</option>
+                  <option value="5">很滿意</option>
+                  <option value="4">滿意</option>
+                  <option value="3">普通</option>
+                  <option value="2">需要調整</option>
+                  <option value="1">失敗</option>
+                </select>
+              </label>
+              <label>料理心得
+                <textarea id="session-note" rows="4" placeholder="例如：雞肉熟了，但菜梗還可以再煮久一點" maxlength="2000"></textarea>
+              </label>
+              <label>照片（可選）
+                <input id="session-photo" type="file" accept="image/*" capture="environment">
+              </label>
+              <button class="primary-button" type="submit">儲存料理紀錄</button>
+              <p id="session-message" class="form-message" role="status"></p>
+            </form>
+            <div id="session-list" class="session-list"></div>
+          </section>
+        </section>
+
+        <section class="backup-section" aria-labelledby="backup-title">
+          <div>
+            <p class="eyebrow">資料保留在自己手上</p>
+            <h2 id="backup-title">備份料理紀錄</h2>
+            <p>照片與心得存在目前的瀏覽器。更換手機或清除網站資料前，請先下載備份。</p>
+          </div>
+          <div class="backup-actions">
+            <button id="export-button" class="secondary-button" type="button">下載備份</button>
+            <label class="secondary-button upload-button">匯入備份
+              <input id="import-file" type="file" accept="application/json,.json" hidden>
+            </label>
+          </div>
+          <p id="backup-message" class="form-message" role="status"></p>
+        </section>
+      </main>
+
+      <footer>每道料理的「已驗證」狀態，應由你自己的實作結果決定。</footer>
+    </div>
+  </body>
+</html>

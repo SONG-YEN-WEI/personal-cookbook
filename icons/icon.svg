@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="我的食譜圖示">
+  <rect width="512" height="512" rx="112" fill="#366a4c"/>
+  <circle cx="256" cy="256" r="170" fill="#f6f1e8"/>
+  <path d="M154 314c41 39 163 39 204 0" fill="none" stroke="#366a4c" stroke-width="22" stroke-linecap="round"/>
+  <path d="M172 176v78m27-78v78m27-78v78m-27-76v89m141-91c-23 27-36 57-36 91h36v-91zm-1 0v160" fill="none" stroke="#366a4c" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

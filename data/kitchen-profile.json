@@ -1,1 +1,16 @@
-{}
+{
+  "defaultServings": 2,
+  "usualDryRiceGrams": [180, 200],
+  "equipment": [
+    { "type": "air_fryer", "name": "飛利浦星樂透視海星氣炸鍋" },
+    { "type": "induction_cooker", "name": "Panasonic KZ-PH34-K" },
+    { "type": "frying_pan", "name": "膳魔師深煎鍋", "modelConfirmed": false },
+    { "type": "soup_pot", "name": "宜得利可拆卸組合湯鍋", "capacityConfirmed": false },
+    { "type": "microwave", "name": "微波爐" }
+  ],
+  "constraints": [
+    "沒有電鍋",
+    "電磁爐火力偏弱；不蓋鍋蓋時較難維持大滾"
+  ],
+  "source": "cook.docx 中的使用者自述；器材實物與規格仍待本人核對"
+}

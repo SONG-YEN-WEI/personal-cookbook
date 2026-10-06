@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cookbook candidate entry",
+  "type": "object",
+  "required": ["id", "title", "status", "evidence"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "category": { "type": "string" },
+    "method": { "type": "string" },
+    "status": { "enum": ["tested", "needs_revision", "unreviewed"] },
+    "summary": { "type": "string" },
+    "evidence": { "type": "string", "minLength": 1 },
+    "reviewNote": { "type": "string" }
+  }
+}
