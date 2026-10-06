@@ -1,4 +1,4 @@
-const CACHE_NAME = "personal-cookbook-v3";
+const CACHE_NAME = "personal-cookbook-v4";
 const APP_FILES = [
   "./",
   "./index.html",
