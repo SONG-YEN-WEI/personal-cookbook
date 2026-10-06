@@ -42,8 +42,8 @@ def main():
         raise SystemExit("Usage: python scripts/package_site.py OUTPUT.tar")
     output = Path(sys.argv[1]).resolve()
     config = committed(".openai/hosting.json")
-    if json.loads(config).get("static") != "dist":
-        raise SystemExit("hosting.json must declare static: dist")
+    if json.loads(config).get("static", {}).get("directory") != "dist":
+        raise SystemExit("hosting.json must declare static.directory: dist")
     with tarfile.open(output, "w") as archive:
         add_bytes(archive, ".openai/hosting.json", config)
         for path in ASSETS:
