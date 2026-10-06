@@ -1,4 +1,4 @@
-const CACHE_NAME = "personal-cookbook-v2";
+const CACHE_NAME = "personal-cookbook-v3";
 const APP_FILES = [
   "./",
   "./index.html",
@@ -10,7 +10,9 @@ const APP_FILES = [
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./data/recipes.json",
-  "./data/recipe-registry.json"
+  "./data/recipe-registry.json",
+  "./data/meal-sessions.json",
+  "./data/cooking-history.json"
 ];
 
 self.addEventListener("install", (event) => {

@@ -1,0 +1,5 @@
+[
+  { "id": "test-2026-10-06-pork-005", "mealSessionId": "dinner-2026-10-06", "recipeId": "pork-005", "recipeVersion": "1.0", "testNumber": 1, "status": "pending", "rating": null, "note": "" },
+  { "id": "test-2026-10-06-tofu-001", "mealSessionId": "dinner-2026-10-06", "recipeId": "tofu-001", "recipeVersion": "1.0", "testNumber": 1, "status": "pending", "rating": null, "note": "" },
+  { "id": "test-2026-10-06-vegetable-006", "mealSessionId": "dinner-2026-10-06", "recipeId": "vegetable-006", "recipeVersion": "1.0", "testNumber": 1, "status": "pending", "rating": null, "note": "" }
+]

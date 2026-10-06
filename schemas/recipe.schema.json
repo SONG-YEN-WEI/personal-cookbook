@@ -2,13 +2,16 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Cookbook recipe",
   "type": "object",
-  "required": ["id", "title", "category", "method", "status", "ingredients", "steps"],
+  "required": ["id", "version", "title", "category", "method", "status", "ingredients", "steps"],
   "properties": {
     "id": { "type": "string", "minLength": 1 },
+    "version": { "type": "string", "minLength": 1 },
     "title": { "type": "string", "minLength": 1 },
     "category": { "type": "string", "minLength": 1 },
     "method": { "type": "string", "minLength": 1 },
-    "status": { "enum": ["validated", "tested", "needs_revision", "unreviewed"] },
+    "status": { "enum": ["planned", "validated", "tested", "needs_revision"] },
+    "servings": { "type": "integer", "minimum": 1 },
+    "sourceNote": { "type": "string" },
     "summary": { "type": "string" },
     "ingredients": {
       "type": "array",

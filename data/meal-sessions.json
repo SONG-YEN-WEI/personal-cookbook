@@ -1,0 +1,10 @@
+[
+  {
+    "id": "dinner-2026-10-06", "date": "2026-10-06", "meal": "dinner", "title": "今晚晚餐", "status": "planned",
+    "recipeRefs": [
+      { "recipeId": "pork-005", "version": "1.0" },
+      { "recipeId": "tofu-001", "version": "1.0" },
+      { "recipeId": "vegetable-006", "version": "1.0" }
+    ]
+  }
+]

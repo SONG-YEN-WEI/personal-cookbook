@@ -27,7 +27,23 @@
         <section class="intro" aria-labelledby="intro-title">
           <p class="eyebrow">自己的廚房，自己的版本</p>
           <h2 id="intro-title">從做過的經驗，整理下一次更好吃的做法。</h2>
-          <p>這裡先收錄料理線索與實作回饋。尚未核對的 AI 提議不會顯示為已驗證食譜。</p>
+          <p>每道菜各有一張食譜卡。選好菜色組成一餐，煮完後再逐道記錄心得。</p>
+        </section>
+
+        <section class="meal-section" aria-labelledby="meal-title">
+          <div class="section-heading"><div><p class="eyebrow">自由組合菜色</p><h2 id="meal-title">今晚晚餐</h2></div></div>
+          <p id="meal-date-label" class="detail-summary"></p>
+          <div id="meal-list" class="meal-list"></div>
+          <div class="meal-actions"><button id="start-meal" class="primary-button" type="button">開始料理</button><span id="meal-status" class="status-badge"></span></div>
+          <p id="meal-message" class="form-message" role="status"></p>
+        </section>
+
+        <section class="calendar-section" aria-labelledby="calendar-title">
+          <div class="section-heading"><div><p class="eyebrow">每天的料理</p><h2 id="calendar-title">料理日曆</h2></div>
+            <div class="calendar-nav"><button id="calendar-prev" type="button" aria-label="上個月">‹</button><span id="calendar-month"></span><button id="calendar-next" type="button" aria-label="下個月">›</button></div>
+          </div>
+          <div id="calendar-grid" class="calendar-grid" aria-label="料理日曆"></div>
+          <div id="calendar-day" class="calendar-day"></div>
         </section>
 
         <section class="catalog" aria-labelledby="catalog-title">
@@ -49,6 +65,7 @@
               <select id="status-filter">
                 <option value="all">全部狀態</option>
                 <option value="validated">已驗證</option>
+                <option value="planned">待實證</option>
                 <option value="tested">做過，待整理</option>
                 <option value="needs_revision">做過，待修訂</option>
                 <option value="unreviewed">待核對</option>
@@ -80,7 +97,7 @@
             <div class="section-heading">
               <div>
                 <p class="eyebrow">只存在這個裝置</p>
-                <h3 id="session-title">記錄這次料理</h3>
+                <h3 id="session-title">記錄這道菜的結果</h3>
               </div>
             </div>
             <form id="session-form" class="session-form">
@@ -94,13 +111,20 @@
                   <option value="1">失敗</option>
                 </select>
               </label>
+              <label>料理後狀態
+                <select id="session-outcome" required>
+                  <option value="tested">做過，待整理</option>
+                  <option value="validated">結果滿意，已驗證這個版本</option>
+                  <option value="needs_revision">需要修訂</option>
+                </select>
+              </label>
               <label>料理心得
                 <textarea id="session-note" rows="4" placeholder="例如：雞肉熟了，但菜梗還可以再煮久一點" maxlength="2000"></textarea>
               </label>
               <label>照片（可選）
                 <input id="session-photo" type="file" accept="image/*" capture="environment">
               </label>
-              <button class="primary-button" type="submit">儲存料理紀錄</button>
+              <button id="session-submit" class="primary-button" type="submit">儲存這道菜的結果</button>
               <p id="session-message" class="form-message" role="status"></p>
             </form>
             <div id="session-list" class="session-list"></div>
@@ -110,8 +134,8 @@
         <section class="backup-section" aria-labelledby="backup-title">
           <div>
             <p class="eyebrow">資料保留在自己手上</p>
-            <h2 id="backup-title">備份料理紀錄</h2>
-            <p>照片與心得存在目前的瀏覽器。更換手機或清除網站資料前，請先下載備份。</p>
+            <h2 id="backup-title">備份餐次與料理紀錄</h2>
+            <p>餐次、照片與心得存在目前的瀏覽器。更換手機或清除網站資料前，請先下載備份。</p>
           </div>
           <div class="backup-actions">
             <button id="export-button" class="secondary-button" type="button">下載備份</button>
