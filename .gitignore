@@ -1,0 +1,4 @@
+# 原始 Word 文件與私人料理紀錄先不要提交
+source/*.docx
+photos/
+sessions/
